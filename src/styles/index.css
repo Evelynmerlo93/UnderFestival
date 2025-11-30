@@ -1,0 +1,50 @@
+/*
+  --- CONFIGURACIÓN DE TAILWIND CSS ---
+  Estas tres directivas son esenciales. Le dicen a Tailwind dónde inyectar
+  sus estilos base, componentes y utilidades.
+*/
+@import "tailwindcss";
+* {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* --- ESTILOS GLOBALES PERSONALIZADOS --- */
+
+body {
+  background-color: #0d0d0e;
+  color: #f3f4f6;
+  font-family: 'Sofia Sans', sans-serif;
+
+  margin: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+
+/* Puedes mantener los estilos para <a> si los necesitas, aunque Tailwind tiene sus propias utilidades */
+a {
+  font-weight: 500;
+  color: #f97316; /* Color naranja de Tailwind para enlaces */
+  text-decoration: inherit;
+  transition: color 0.25s;
+}
+a:hover {
+  color: #ea580c;
+}
+
+/* Si necesitas reiniciar algunos estilos de encabezados que Tailwind no toca por defecto */
+h1, h2, h3, h4 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Reiniciar el root global (ya que Tailwind lo reemplaza) */
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,60 @@
+/* src/styles/global.css */
+
+/* 1. Reseteo Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 👉 AÑADIDO: Aseguramos que los elementos raíz ocupen el 100% del ancho */
+html, body {
+    width: 100%; 
+    /* Evita barras de desplazamiento horizontal no deseadas */
+    overflow-x: hidden; 
+}
+
+
+/* 2. Variables de Color (Estilo Oscuro/Alto Contraste) */
+:root {
+    --color-background: #000000;
+    --color-primary-text: #ffffff;
+    --color-accent: #FF6B6B; /* Rojo/Naranja para CTAs */
+    --color-secondary-accent: #FFD93D; /* Amarillo para highlights */
+    --font-stack: 'Sofia Sans', sans-serif;
+}
+
+/* 3. Estilos del Cuerpo */
+body {
+    /* Esto debería forzar el fondo negro */
+    background-color: var(--color-background) !important; 
+    color: var(--color-primary-text); 
+    font-family: 'Sofia Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo para los enlaces/botones */
+a {
+    color: var(--color-primary-text);
+    text-decoration: none;
+}
+
+/* Estilo para la aplicación en general */
+.App {
+    min-height: 200vh;
+    /* 👉 AÑADIDO: Forzamos el ancho al 100% */
+    width: 100%; 
+    overflow-x: hidden;
+}
+
+.glow-orange {
+  text-shadow: 0 0 8px #ff4d00, 0 0 14px #ff4d00;
+}
+
+.glow-purple {
+  text-shadow: 0 0 6px #6b00ff, 0 0 12px #6b00ff;
+}
+
+.neon-border {
+  box-shadow: 0 0 10px rgba(255, 77, 0, 0.5), 0 0 20px rgba(255, 77, 0, 0.3);
+}

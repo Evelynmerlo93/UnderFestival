@@ -1,0 +1,61 @@
+/* src/styles/Header.css */
+.main-header {
+    width: 100%;
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    /* Fondo semitransparente oscuro para un look moderno (como Creamfields) */
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 2rem;
+}
+
+.main-nav a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-secondary-accent); 
+}
+
+/* Estilo del botón CTA (TICKETS) */
+.cta-link {
+    background-color: var(--color-accent);
+    color: var(--color-background) !important; /* Fuerza el color oscuro del texto */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-link:hover {
+    background-color: var(--color-secondary-accent);
+}

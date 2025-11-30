@@ -1,0 +1,172 @@
+/* src/styles/Lineup.css */
+
+/* -------------------------------------------------------------------------- */
+/* LINEUP SECTION STYLES */
+/* -------------------------------------------------------------------------- */
+
+.lineup-section {
+    padding: 80px 20px; /* Padding general de la sección */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Color de texto general */
+    text-align: center;
+}
+
+.lineup-title {
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    color: #FF4500; /* Color de acento para el título */
+}
+
+/* Day Filter Buttons (ahora solo mostrará "TODOS") */
+.day-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.day-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+.day-button:hover {
+    background-color: #555;
+}
+
+.day-button.active {
+    background-color: #FF4500; /* Botón activo con color de acento */
+    color: #000;
+}
+
+/* Contenedor de las tarjetas de artistas (la cuadrícula) */
+.artist-cards-container {
+    display: grid;
+    /* Define 5 columnas de igual tamaño para desktop */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Ancho máximo para la cuadrícula */
+    margin: 0 auto 50px auto; /* Centrar la cuadrícula y dar margen inferior */
+}
+
+/* Estilos de la tarjeta individual (ArtistCard) */
+.artist-card {
+    background-color: #1a1a1a; /* Fondo oscuro para la tarjeta */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex; /* Usar flexbox dentro de la tarjeta */
+    flex-direction: column; /* Organizar contenido en columna */
+    height: 100%; /* Asegurar que todas las tarjetas tengan la misma altura */
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3); /* Efecto hover con sombra */
+}
+
+.artist-image {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 200px; /* Altura Fija para las imágenes (ajustable) */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarse */
+    display: block;
+}
+
+.artist-details {
+    padding: 15px;
+    text-align: left;
+    flex-grow: 1; /* Permite que este div ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el día hacia abajo si hay espacio */
+}
+
+.artist-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.artist-stage {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.artist-day {
+    display: inline-block;
+    background-color: #FF4500;
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: auto; /* Empuja la etiqueta del día hacia abajo */
+}
+
+/* Botón "Ver Lineup Completo" */
+.view-full-lineup-button {
+    background: transparent;
+    border: 2px solid #FF4500;
+    color: #FF4500;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.view-full-lineup-button:hover {
+    background-color: #FF4500;
+    color: #000;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) { /* Para pantallas un poco más pequeñas */
+    .artist-cards-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+
+@media (max-width: 992px) { /* Para tablets grandes */
+    .artist-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) { /* Para tablets pequeñas */
+    .artist-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+    .lineup-title {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 576px) { /* Para móviles */
+    .artist-cards-container {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+    .lineup-title {
+        font-size: 2em;
+    }
+    .day-filters {
+        flex-wrap: wrap; /* Los botones de día se envuelven si no caben */
+        gap: 10px;
+    }
+}
