@@ -6,6 +6,7 @@
 Plataforma de comercio electrónico (e-commerce) minimalista y responsive diseñada para la venta de entradas de festivales o eventos musicales, con un enfoque en la experiencia de usuario (UX) para la selección y checkout.
 
 Este proyecto se centra en la simulación de un flujo de compra de entradas, manejo de estado del carrito en tiempo real y validación de formularios.
+---
 
 🚀 Tecnologías Clave
 
@@ -40,6 +41,7 @@ Lenguaje
 JavaScript (ES6+)
 
 Lógica funcional para el carrito, cálculos de impuestos y validación de formularios.
+--- 
 
 ✨ Características Destacadas
 
@@ -53,6 +55,7 @@ Notificaciones No Intrusivas: Implementación de un sistema de notificaciones to
 
 Responsive Design: Diseño optimizado para una perfecta visualización y usabilidad tanto en dispositivos móviles como en escritorios.
 
+---
 🛠️ Instalación y Configuración
 
 Para poner en marcha el proyecto localmente, sigue estos sencillos pasos:
@@ -91,6 +94,7 @@ npm run build
 # o
 yarn build
 
+---
 
 📄 Estructura del Proyecto
 
@@ -111,7 +115,8 @@ La lógica principal de la aplicación reside en el componente de página de ent
 ├── package.json
 └── README.md              # Este archivo.
 
-
+--- 
+ 
 🤝 Contribución
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar el proyecto, sigue estos pasos:
